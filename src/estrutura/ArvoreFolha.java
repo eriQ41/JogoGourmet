@@ -13,7 +13,7 @@ public class ArvoreFolha extends ArvoreNo{
 
 	@Override
 	public String getPergunta() {
-		return String.format("É uma %s ?", this.getDescricao());
+		return String.format("É um(a) %s ?", this.getDescricao());
 	}
 	
 }

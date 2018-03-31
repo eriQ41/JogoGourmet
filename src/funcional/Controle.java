@@ -11,14 +11,12 @@ public class Controle {
 	private boolean continua = true;
 	
 	public Controle() {
-		//parametrizacao inicial
 		raiz = new ArvoreDescricao("Massa");
 		raiz.setNoDir(new ArvoreFolha("Bolo"));
 		raiz.setNoEsq(new ArvoreFolha("Lasanha"));
 	}
 	
-	public void iniciar() {
-		//desenv do jogo				
+	public void iniciar() {				
 		ArvoreNo noAtual = raiz;
 		while (continua) {				
 			if(isInicioDeJogo(noAtual)) {
@@ -40,7 +38,6 @@ public class Controle {
 		} else {
 			noProximo = noAtual.getNoDir();
 		}
-
 		if(noProximo.isFolha()) {
 			boolean respostaComida = janela.pergunta(noProximo.getPergunta());
 			if(respostaComida) {
@@ -62,7 +59,5 @@ public class Controle {
 		} else {
 			return noProximo;
 		}
-		
-		
 	}
 }

@@ -3,7 +3,6 @@ package views;
 import javax.swing.JOptionPane;
 
 public class Janelas {	
-	//pergunta a descrição
 	public boolean pergunta(String pergunta) {
 		 int opcao = JOptionPane.showConfirmDialog(
 				 null, 
@@ -13,7 +12,7 @@ public class Janelas {
 			);
 		 return opcao == JOptionPane.YES_OPTION;				
 	}
-	//acertou!
+	
 	public void respostaCorreta() {
 		JOptionPane.showMessageDialog(
 			null, 
@@ -30,27 +29,6 @@ public class Janelas {
 				"Pergunta",
 				JOptionPane.QUESTION_MESSAGE
 			);
-//		
-//		if (novaEntidade == null)
-//			return null;
-//
-//		String novaCaracteristica = JOptionPane.showInputDialog(
-//				null,
-//				String.format(
-//						"Complete a sentença: %s é um(a) ____  e %s não.", 
-//						novaEntidade.toLowerCase(),
-//						no.getDescricao().toLowerCase()
-//						),
-//				"Complete a sentença",
-//				JOptionPane.QUESTION_MESSAGE
-//			);
-//		if (novaCaracteristica == null)
-//			return null;
-//
-//		ArvoreNo noCaracteristica = new ArvoreDescricao(novaCaracteristica); //new NoCaracteristica(novaCaracteristica);
-//		noCaracteristica.setNoEsq(new ArvoreFolha(novaEntidade)); //new NoEntidade(novaEntidade));
-//
-//		return noCaracteristica;
 	}
 
 	public String perguntaNovaDescricao(String novaComida, String antigaComida) {
@@ -59,8 +37,7 @@ public class Janelas {
 				String.format("%s é ____ mas %s não.",novaComida,antigaComida),
 				"Pergunta",
 				JOptionPane.QUESTION_MESSAGE
-			);
-//		
+			);	
 	}
 
 	public void inicio() {
